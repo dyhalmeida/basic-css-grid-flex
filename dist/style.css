@@ -17,10 +17,11 @@ body {
   margin: 20px auto;
 
   display: grid; /* Define um display GRID para o container */
-  grid-gap: 10px; /* Define espaçamento entre lonhas e colunas */
+  grid-gap: 10px; /* Define espaçamento entre linhas e colunas */
   grid-template-columns: repeat(3, 1fr); /* Define o grid com 3 colunas */
-  grid-template-rows: repeat(4, auto); /* Define o GRID com 3 linhas */
+  grid-template-rows: repeat(4, auto); /* Define o GRID com 4 linhas */
 
+  /* Define a area do grid nomeada */
   grid-template-areas:
     "header header header"
     "main main aside"
@@ -41,6 +42,8 @@ body {
 .container .header {
   background: #12203e;
   color: #fff;
+  
+  /* Define localização de um item de grade dentro da grade* */
   grid-area: header;
 }
 
