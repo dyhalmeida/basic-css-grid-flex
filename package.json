@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/dyhalmeida/basic-css-grid-flex/issues"
   },
-  "homepage": "http://dyhalmeida.github.io/css-grid-flex",
+  "homepage": "http://dyhalmeida.github.io/basic-css-grid-flex",
   "dependencies": {
     "gh-pages": "^2.1.1"
   }
