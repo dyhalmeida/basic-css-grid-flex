@@ -1,24 +1,25 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    background: #ddd;
-    color: #000;
-    font-family: Arial, Helvetica, sans-serif;
+html,
+body {
+  background: #ddd;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
-    max-width: 1000px;
-    width: 90%;
-    margin: 20px auto;
+  max-width: 1000px;
+  width: 90%;
+  margin: 20px auto;
 
-    display: grid; /* Define um display GRID para o container */
-    grid-gap: 10px; /* Define espaçamento entre lonhas e colunas */
-    grid-template-columns: repeat(3, 1fr); /* Define o grid com 3 colunas */
-    grid-template-rows: repeat(4, auto); /* Define o GRID com 3 linhas */
+  display: grid; /* Define um display GRID para o container */
+  grid-gap: 10px; /* Define espaçamento entre lonhas e colunas */
+  grid-template-columns: repeat(3, 1fr); /* Define o grid com 3 colunas */
+  grid-template-rows: repeat(4, auto); /* Define o GRID com 3 linhas */
 }
 
 .container > div,
@@ -26,44 +27,74 @@ html, body {
 .container .main,
 .container .aside,
 .container .footer {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .container .header {
-    background: #12203e;
-    color: #fff;
+  background: #12203e;
+  color: #fff;
 
-    grid-column-start: 1; /* Define que o header inicia na coluna 1*/
-    grid-column-end: -1; /* Define que o header encerra na ultima coluna*/
-    /* define-se -1 quando não se sabe a quantidade de coluna */
+  grid-column-start: 1; /* Define que o header inicia na coluna 1*/
+  grid-column-end: -1; /* Define que o header encerra na ultima coluna*/
+  /* define-se -1 quando não se sabe a quantidade de coluna */
 }
 
 .container .main {
-    grid-column: span 2;
+  grid-column: span 2;
 }
 
 .container .aside {
-    background: #faa43d;
-    grid-column: span 1; /* Define a espanção de 1 coluna */
-    grid-row: span 2; /* Define a espanção de 2 linha */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  min-height: 100px;
+  background: #faa43d;
+  grid-column: span 1; /* Define a espanção de 1 coluna */
+  grid-row: span 2; /* Define a espanção de 2 linha */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container .widget-1,
 .container .widget-2 {
-    background: #55a8fd;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: #55a8fd;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container .footer {
-    background: #12203e;
-    color: #fff;
+  background: #12203e;
+  color: #fff;
+  grid-column: 1 / -1;
+}
+
+@media screen and (max-width: 592px) {
+
+}
+@media screen and (max-width: 656px) {
+
+}
+@media screen and (max-width: 752px) {
+  .container .main {
     grid-column: 1 / -1;
+  }
+
+  .container .aside {
+    grid-column: 1 / -1;
+  }
+
+  .container .widget-1 {
+    grid-column: span 2;
+  }
+}
+@media screen and (max-width: 1088px) {
+
+}
+@media screen and (max-width: 1312px) {
+
+}
+@media screen and (max-width: 1600px) {
+ 
 }
