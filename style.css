@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background: #ddd;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 20px auto;
+
+    display: grid; /* Define um display GRID para o container */
+    grid-gap: 20px; /* Define espaçamento entre lonhas e colunas */
+    grid-template-columns: repeat(3, 1fr); /* Define o grid com 3 colunas */
+    grid-template-rows: repeat(4, auto); /* Define o GRID com 3 linhas */
+}
