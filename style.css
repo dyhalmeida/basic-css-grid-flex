@@ -52,3 +52,12 @@ html, body {
     justify-content: center;
     align-items: center;
 }
+
+.container .widget-1,
+.container .widget-2 {
+    background: #12203e;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
