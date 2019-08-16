@@ -39,3 +39,7 @@ html, body {
     grid-column-end: -1; /* Define que o header encerra na ultima coluna*/
     /* define-se -1 quando não se sabe a quantidade de coluna */
 }
+
+.container .main {
+    grid-column: span 2;
+}
