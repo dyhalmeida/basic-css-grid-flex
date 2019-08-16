@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #ddd;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  width: 90%;
+  margin: 20px auto;
+
+  display: grid; /* Define um display GRID para o container */
+  grid-gap: 10px; /* Define espaçamento entre lonhas e colunas */
+  grid-template-columns: repeat(3, 1fr); /* Define o grid com 3 colunas */
+  grid-template-rows: repeat(4, auto); /* Define o GRID com 3 linhas */
+
+  grid-template-areas:
+    "header header header"
+    "main main aside"
+    "widget-1 widget-2 aside"
+    "footer footer footer";
+}
+
+.container > div,
+.container .header,
+.container .main,
+.container .aside,
+.container .footer {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.container .header {
+  background: #12203e;
+  color: #fff;
+  grid-area: header;
+}
+
+.container .main {
+  grid-area: main;
+}
+
+.container .aside {
+  min-height: 100px;
+  background: #faa43d;
+  grid-area: aside;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .widget-1,
+.container .widget-2 {
+  background: #55a8fd;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .widget-1 {
+  grid-area: widget-1;
+}
+
+.container .widget-2 {
+  grid-area: widget-2;
+}
+
+.container .footer {
+  background: #12203e;
+  color: #fff;
+  grid-area: footer;
+}
+
+@media screen and (max-width: 655px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      "header"
+      "main"
+      "aside"
+      "widget-1"
+      "widget-2"
+      "footer";
+  }
+}
+
+@media screen and (min-width: 752px) {
+  .container {
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "header header header"
+      "main main aside"
+      "widget-1 widget-2 aside"
+      "footer footer footer";
+  }
+}
+
+/*
+@media screen and (max-width: 1088px) {
+
+}
+@media screen and (max-width: 1312px) {
+
+}
+@media screen and (max-width: 1600px) {
+ 
+} */
