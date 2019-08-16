@@ -16,7 +16,26 @@ html, body {
     margin: 20px auto;
 
     display: grid; /* Define um display GRID para o container */
-    grid-gap: 20px; /* Define espaçamento entre lonhas e colunas */
+    grid-gap: 10px; /* Define espaçamento entre lonhas e colunas */
     grid-template-columns: repeat(3, 1fr); /* Define o grid com 3 colunas */
     grid-template-rows: repeat(4, auto); /* Define o GRID com 3 linhas */
+}
+
+.container > div,
+.container .header,
+.container .main,
+.container .aside,
+.container .footer {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.container .header {
+    background: #12203e;
+    color: #fff;
+
+    grid-column-start: 1; /* Define que o header inicia na coluna 1*/
+    grid-column-end: -1; /* Define que o header encerra na ultima coluna*/
+    /* define-se -1 quando não se sabe a quantidade de coluna */
 }
