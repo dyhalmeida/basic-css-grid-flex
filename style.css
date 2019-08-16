@@ -43,3 +43,12 @@ html, body {
 .container .main {
     grid-column: span 2;
 }
+
+.container .aside {
+    background: #faa43d;
+    grid-column: span 1; /* Define a espanção de 1 coluna */
+    grid-row: span 2; /* Define a espanção de 2 linha */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
