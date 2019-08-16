@@ -1,0 +1,25 @@
+{
+  "name": "br.com.basic-css-grid-flex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dyhalmeida/basic-css-grid-flex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dyhalmeida/basic-css-grid-flex/issues"
+  },
+  "homepage": "http://dyhalmeida.github.io/css-grid-flex",
+  "dependencies": {
+    "gh-pages": "^2.1.1"
+  }
+}
