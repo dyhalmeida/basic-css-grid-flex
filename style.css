@@ -20,6 +20,13 @@ body {
   grid-gap: 10px; /* Define espaçamento entre lonhas e colunas */
   grid-template-columns: repeat(3, 1fr); /* Define o grid com 3 colunas */
   grid-template-rows: repeat(4, auto); /* Define o GRID com 3 linhas */
+
+  grid-template-areas: 
+  "header header header"
+  "main main aside"
+  "widget-1 widget-2 aside"
+  "footer footer footer";
+
 }
 
 .container > div,
@@ -35,21 +42,17 @@ body {
 .container .header {
   background: #12203e;
   color: #fff;
-
-  grid-column-start: 1; /* Define que o header inicia na coluna 1*/
-  grid-column-end: -1; /* Define que o header encerra na ultima coluna*/
-  /* define-se -1 quando não se sabe a quantidade de coluna */
+  grid-area: header;
 }
 
 .container .main {
-  grid-column: span 2;
+    grid-area: main;
 }
 
 .container .aside {
   min-height: 100px;
   background: #faa43d;
-  grid-column: span 1; /* Define a espanção de 1 coluna */
-  grid-row: span 2; /* Define a espanção de 2 linha */
+  grid-area: aside;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,10 +67,19 @@ body {
   align-items: center;
 }
 
+.container .widget-1 {
+    grid-area: widget-1;
+}
+
+
+.container .widget-2 {
+    grid-area: widget-2;
+}
+
 .container .footer {
   background: #12203e;
   color: #fff;
-  grid-column: 1 / -1;
+  grid-area: footer;
 }
 
 @media screen and (max-width: 592px) {
@@ -77,17 +89,7 @@ body {
 
 }
 @media screen and (max-width: 752px) {
-  .container .main {
-    grid-column: 1 / -1;
-  }
-
-  .container .aside {
-    grid-column: 1 / -1;
-  }
-
-  .container .widget-1 {
-    grid-column: span 2;
-  }
+  
 }
 @media screen and (max-width: 1088px) {
 
